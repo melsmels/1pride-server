@@ -23,19 +23,19 @@ dotenv.config();
 connectDB();
 
 // CORS
-const whitelist = [process.env.CLIENT_URL];
+// const whitelist = [process.env.CLIENT_URL];
 
-const corsOptions = {
-    origin: function(origin, callback) {
-        if(whitelist.includes(origin)) {
-            callback(null, true)
-        } else {
-            callback(new Error('CORS Error'))
-        }
-    }
-}
+// const corsOptions = {
+//     origin: function(origin, callback) {
+//         if(whitelist.includes(origin)) {
+//             callback(null, true)
+//         } else {
+//             callback(new Error('CORS Error'))
+//         }
+//     }
+// }
 
-app.use(cors(corsOptions))
+// app.use(cors(corsOptions))
 
 // Routing
 app.use('/v1/users', userRoutes);
