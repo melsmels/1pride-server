@@ -23,7 +23,7 @@ dotenv.config();
 connectDB();
 
 // CORS
-/* const whitelist = [process.env.CLIENT_URL];
+const whitelist = [process.env.CLIENT_URL];
 
 const corsOptions = {
     origin: function(origin, callback) {
@@ -35,7 +35,7 @@ const corsOptions = {
     }
 }
 
-app.use(cors(corsOptions)) */
+app.use(cors(corsOptions))
 
 // Routing
 app.use('/v1/users', userRoutes);
